@@ -1,0 +1,14 @@
+[package]
+name = "isow"
+version = "0.1.0"
+authors = ["Anthony Foxclaw"]
+edition = "2018"
+repository = "https://github.com/tonytins/isow"
+license = "MPL 2.0"
+description = """
+Prints the local date and time in the ISO 8601 format.
+"""
+
+[dependencies]
+chrono = "0.4"
+clap = { version = "2.33", features = [ "yaml", "wrap_help" ] }
