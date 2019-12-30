@@ -16,11 +16,12 @@ See also the list of [contributors](https://github.com/tonytins/isow/contributor
 
 ## Examples
 
-- ``isow``: ``2020-W01``
-- ``iso -w``: ``W1``
-- ``iso -y``: ``2020``
+- ``isow``: ``2020-W01-30``
+- ``isow -d``: ``30``
+- ``isow -w``: ``W01``
+- ``isow -y``: ``2020``
 
-Adding ``-u`` swaps your local time for UTC. However, ``-y`` and ``-w`` can't be used together to give you the same output as running ``isow`` on it's own. This will be fixed.
+Adding ``-u`` swaps your local time for UTC.
 
 ## License
 

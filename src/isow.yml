@@ -2,9 +2,8 @@ name: ISO Week
 args:
   - debug:
       help: Outputs debug information.
-      aliases: [dbg]
       long: debug
-      short: d
+      short: D
       global: true
   - utc:
       help: Prints the ISO 8601 date in UTC
@@ -16,9 +15,18 @@ args:
       short: y
       conflicts_with:
         - week
+        - day
+  - day:
+      help: Prints the week
+      long: day
+      short: d
+      conflicts_with:
+        - year
+        - week
   - week:
       help: Prints the week
       long: week
       short: w
       conflicts_with:
         - year
+        - day

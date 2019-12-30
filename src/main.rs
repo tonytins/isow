@@ -2,6 +2,7 @@
  * This project is licensed under the MPL 2.0 license.
  * See the LICENSE file in the project root for more information.
  */
+#[allow(dead_code)]
 mod flags;
 
 use flags::*;
@@ -19,19 +20,21 @@ fn main() {
 
     // let debug = matches.is_present(DEBUG_FLAG);
     let utc = matches.is_present(UTC_FLAG);
-    let week = matches.is_present(WEEK_FLAG);
-    let year = matches.is_present(YEAR_FLAG);
+    let (is_week, is_year, is_day) = (
+        matches.is_present(WEEK_FLAG),
+        matches.is_present(YEAR_FLAG),
+        matches.is_present(DAY_FLAG)
+    );
 
     let dt= Local::now();
     let utc_dt = Utc::now();
-    let isow = if utc { utc_dt.iso_week() } else { dt.iso_week() };
+    let day = if utc { utc_dt.day() } else { dt.day() };
+    let iso_week = if utc { utc_dt.iso_week() } else { dt.iso_week() };
 
-    if week {
-        println!("W{}", isow.week());
-    } else if year {
-        println!("{}", isow.year());
-    } else {
-        println!("{:?}", isow);
+    match (is_day, is_week, is_year) {
+        (true, _, _) => println!("{}", format!("{:02}", day)),
+        (_, true, _) => println!("W{}", format!("{:02}", iso_week.week())),
+        (_, _, true) => println!("{}", iso_week.year()),
+        _ => println!("{:?}-{}", iso_week, day),
     }
-
 }
