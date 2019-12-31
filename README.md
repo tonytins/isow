@@ -1,12 +1,12 @@
 # ISOW (ISO Week)
 
-ISO Week is a simple CLI program that prints the local date and time in the ISO 8601 format. Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c) inspired me to write this.
+ISO Week is a simple CLI program that prints the local or UTC date in the ISO 8601 format with week presented as W. Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c) inspired me to write this. This is not designed to print the full ISO 8601 date and time.
 
 ## Requirements
 
 ### Prerequisites
 
--   Rust 2018 update
+- Rust 2018 update
 
 ## Authors
 
