@@ -20,16 +20,16 @@ fn main() {
 
     // let debug = matches.is_present(DEBUG_FLAG);
     let utc = matches.is_present(UTC_FLAG);
-    let (is_week, is_year, is_day) = (
+    let (is_day, is_week, is_year) = (
+        matches.is_present(DAY_FLAG),
         matches.is_present(WEEK_FLAG),
-        matches.is_present(YEAR_FLAG),
-        matches.is_present(DAY_FLAG)
+        matches.is_present(YEAR_FLAG)
     );
 
-    let dt= Local::now();
-    let utc_dt = Utc::now();
-    let day = if utc { utc_dt.day() } else { dt.day() };
-    let iso_week = if utc { utc_dt.iso_week() } else { dt.iso_week() };
+    let dt = Local::now();
+    let dt_utc = Utc::now();
+    let day = if utc { dt_utc.day() } else { dt.day() };
+    let iso_week = if utc { dt_utc.iso_week() } else { dt.iso_week() };
 
     match (is_day, is_week, is_year) {
         (true, _, _) => println!("{}", day),
