@@ -32,9 +32,9 @@ fn main() {
     let iso_week = if utc { utc_dt.iso_week() } else { dt.iso_week() };
 
     match (is_day, is_week, is_year) {
-        (true, _, _) => println!("{:02}", day),
+        (true, _, _) => println!("{}", day),
         (_, true, _) => println!("W{:02}", iso_week.week()),
         (_, _, true) => println!("{}", iso_week.year()),
-        _ => println!("{:?}-{:02}", iso_week, day),
+        _ => println!("{:?}-{}", iso_week, day),
     }
 }
