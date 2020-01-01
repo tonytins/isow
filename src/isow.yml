@@ -1,12 +1,7 @@
 name: ISO Week
 args:
-  - debug:
-      help: Outputs debug information.
-      long: debug
-      short: D
-      global: true
   - utc:
-      help: Prints the ISO 8601 date in UTC
+      help: Swaps your local time zone for UTC.
       long: utc
       short: u
   - year:
@@ -17,7 +12,7 @@ args:
         - week
         - day
   - day:
-      help: Prints the week
+      help: Prints the day
       long: day
       short: d
       conflicts_with:

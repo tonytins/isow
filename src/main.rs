@@ -18,7 +18,6 @@ fn main() {
         .version(crate_version!())
         .get_matches();
 
-    // let debug = matches.is_present(DEBUG_FLAG);
     let utc = matches.is_present(UTC_FLAG);
     let (is_day, is_week, is_year) = (
         matches.is_present(DAY_FLAG),

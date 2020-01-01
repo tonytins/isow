@@ -3,7 +3,6 @@
  * See the LICENSE file in the project root for more information.
  */
 #[allow(dead_code)]
-pub const DEBUG_FLAG: &str = "debug";
 pub const UTC_FLAG: &str = "utc";
 pub const DAY_FLAG: &str = "day";
 pub const WEEK_FLAG: &str = "week";
