@@ -25,3 +25,13 @@ args:
       conflicts_with:
         - year
         - day
+
+subcommands:
+  - update:
+      about: Updates the program to the latest version.
+      version: 0.1
+      args:
+        - status:
+            long: status
+            short: s
+            help: Prints the update status information

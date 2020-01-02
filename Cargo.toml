@@ -11,4 +11,5 @@ Prints the local or utc week in the ISO 8601 format, e.g. 2006-W52-7.
 
 [dependencies]
 chrono = "0.4"
+self_update = "0.8"
 clap = { version = "2.33", features = [ "yaml", "wrap_help" ] }
