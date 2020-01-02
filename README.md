@@ -27,7 +27,7 @@ By default, ISOW uses your local time zone. Adding ``-u`` will switch to UTC.
 
 ## Updating
 
-You can update ISOW at anytime by typing ``isow update``.
+You can update ISOW at anytime by typing ``isow update``. This will give you information on the latest release, if any, and any compatibility warnings with an optionto accept or deny the download. Adding the ``-l`` or ``--list`` flag to the update subcommand will give you list of all available updates.
 
 ## License
 
