@@ -30,7 +30,7 @@ subcommands:
   - update:
       about: Updates the program to the latest version.
       args:
-        - status:
-            long: status
-            short: s
-            help: Prints the update status information
+        - list:
+            long: list
+            short: l
+            help: List the available releases

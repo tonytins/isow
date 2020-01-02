@@ -25,6 +25,10 @@ See also the list of [contributors](https://github.com/tonytins/isow/contributor
 
 By default, ISOW uses your local time zone. Adding ``-u`` will switch to UTC.
 
+## Updating
+
+You can update ISOW at anytime by typing ``isow update``.
+
 ## License
 
 This project is licensed under the MPL 2.0 license - see the [LICENSE](LICENSE) file for details.

@@ -29,7 +29,7 @@ fn main() {
     if let Some(upd) = matches.subcommand_matches("update") {
 
         let patcher = Patcher::default();
-        let is_status = upd.is_present(STATUS_FLAG);
+        let is_status = upd.is_present(LIST_FLAG);
 
         match is_status {
             true => {
