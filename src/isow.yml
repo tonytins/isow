@@ -29,7 +29,6 @@ args:
 subcommands:
   - update:
       about: Updates the program to the latest version.
-      version: 0.1
       args:
         - status:
             long: status
