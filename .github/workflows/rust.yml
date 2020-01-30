@@ -3,12 +3,12 @@ name: Rust
 on: [push]
 
 jobs:
-  unix_1:
-    name: Unix Platforms
+  unix:
+    name: Ubuntu
     runs-on: ${{ matrix.platform }}
     strategy:
       matrix:
-        platform: [ubuntu-16.04, ubuntu-latest, macOS-latest]
+        platform: [ubuntu-16.04, ubuntu-latest]
     steps:
       - uses: actions/checkout@v1
       - name: Update
@@ -20,10 +20,27 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
-          name: isow
+          name: linux
           path: target/debug/isow
 
-  windows_2:
+  windows:
+    name: macOS
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Update
+        run: rustup update
+      - name: Build
+        run: cargo build --verbose
+      - name: Run tests
+        run: cargo test --verbose
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: macos
+          path: target/debug/isow
+
+  windows:
     name: Windows
     runs-on: windows-latest
     steps:
@@ -37,5 +54,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
-          name: isow
+          name: windows
           path: target/debug/isow.exe
