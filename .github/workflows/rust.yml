@@ -14,9 +14,9 @@ jobs:
       - name: Update
         run: rustup update
       - name: Build
-        run: cargo build --verbose
+        run: cargo build -v --release
       - name: Run tests
-        run: cargo test --verbose
+        run: cargo test -v
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
@@ -31,9 +31,9 @@ jobs:
       - name: Update
         run: rustup update
       - name: Build
-        run: cargo build --verbose
+        run: cargo build -v --release
       - name: Run tests
-        run: cargo test --verbose
+        run: cargo test -v
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
@@ -48,9 +48,9 @@ jobs:
       - name: Update
         run: rustup update
       - name: Build
-        run: cargo build --verbose
+        run: cargo build -v --release
       - name: Run tests
-        run: cargo test --verbose
+        run: cargo test -v
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
