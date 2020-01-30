@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: linux
-          path: target/debug/isow
+          path: target/release/isow
 
   macos:
     name: macOS
@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: macos
-          path: target/debug/isow
+          path: target/release/isow
 
   windows:
     name: Windows
@@ -55,4 +55,4 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: windows
-          path: target/debug/isow.exe
+          path: target/release/isow.exe
