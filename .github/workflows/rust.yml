@@ -23,7 +23,7 @@ jobs:
           name: linux
           path: target/debug/isow
 
-  windows:
+  macos:
     name: macOS
     runs-on: macOS-latest
     steps:
