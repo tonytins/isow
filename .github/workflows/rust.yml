@@ -21,6 +21,8 @@ jobs:
         run: cargo build -v --release --all-features
       - name: Run tests
         run: cargo test -v
+      - name: Fix file permissions
+        run: chmod +x target/release/isow
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
@@ -38,6 +40,8 @@ jobs:
         run: cargo build -v --release --all-features
       - name: Run tests
         run: cargo test -v
+      - name: Fix file permissions
+        run: chmod +x target/release/isow
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
