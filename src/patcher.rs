@@ -3,6 +3,7 @@
  * See the LICENSE file in the project root for more information.
  */
 #![allow(dead_code)]
+#![cfg(feature = "updater")]
 use clap::crate_version;
 use self_update::backends::github::{ReleaseList, Update};
 use std::error::Error;

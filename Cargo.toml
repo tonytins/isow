@@ -1,15 +1,23 @@
 [package]
 name = "isow"
-version = "0.2.5"
+version = "0.2.6"
 authors = ["Anthony Foxclaw"]
 edition = "2018"
 repository = "https://github.com/tonytins/isow"
-license = "MPL 2.0"
+license = "MPL-2.0"
 description = """
 Prints the local or utc week in the ISO 8601 format, e.g. 2006-W52-7.
 """
+readme = "README.md"
+keywords = ["finance", "week", "iso", "iso-week"]
+categories = ["command-line-utilities", "date-and-time"]
 
 [dependencies]
 chrono = "0.4"
-self_update = "0.8"
+self_update = { version = "0.8", optional = true }
 clap = { version = "2.33", features = [ "yaml", "wrap_help" ] }
+
+[features]
+updater = ["self_update"]
+
+default = ["updater"]
