@@ -18,7 +18,7 @@ jobs:
       - name: Update
         run: rustup update
       - name: Build
-        run: cargo build -v --release --features updater
+        run: cargo build -v --release --all-features
       - name: Run tests
         run: cargo test -v
       - name: Upload artifact
@@ -35,7 +35,7 @@ jobs:
       - name: Update
         run: rustup update
       - name: Build
-        run: cargo build -v --release --features updater
+        run: cargo build -v --release --all-features
       - name: Run tests
         run: cargo test -v
       - name: Upload artifact
@@ -52,7 +52,7 @@ jobs:
       - name: Update
         run: rustup update
       - name: Build
-        run: cargo build -v --release --features updater
+        run: cargo build -v --release --all-features
       - name: Run tests
         run: cargo test -v
       - name: Upload artifact
