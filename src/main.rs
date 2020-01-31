@@ -28,19 +28,21 @@ fn main() {
 
     match matches.subcommand_name() {
         #[cfg(feature = "updater")]
-        Some("update") => {
-            let patcher = Patcher::default();
-            let is_status = upd.is_present(LIST_FLAG);
+        Some(UPDATE_FLAG) => {
+            if let Some(upd) = matches.subcommand_matches(UPDATE_FLAG) {
+                let patcher = Patcher::default();
+                let is_status = upd.is_present(LIST_FLAG);
 
-            match is_status {
-                true => {
-                    if let Err(err) = patcher.release_list() {
-                        exit_on_error(err);
+                match is_status {
+                    true => {
+                        if let Err(err) = patcher.release_list() {
+                            exit_on_error(err);
+                        }
                     }
-                }
-                false => {
-                    if let Err(err) = patcher.update("isow") {
-                        exit_on_error(err);
+                    false => {
+                        if let Err(err) = patcher.update("isow") {
+                            exit_on_error(err);
+                        }
                     }
                 }
             }
