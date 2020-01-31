@@ -12,6 +12,12 @@ readme = "README.md"
 keywords = ["finance", "week", "iso", "iso-week"]
 categories = ["command-line-utilities", "date-and-time"]
 
+[badges]
+appveyor = { repository = "tonytins/isow", branch = "master" }
+travis-ci = { repository = "tonytins/isow", branch = "master" }
+codecov = { repository = "tonytins/isow", branch = "master" }
+maintenance = { status = "actively-developed" }
+
 [dependencies]
 chrono = "0.4"
 self_update = { version = "0.8", optional = true }

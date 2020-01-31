@@ -1,6 +1,6 @@
 # ISOW (ISO Week)
 
-![Rust](https://github.com/tonytins/isow/workflows/Rust/badge.svg) [![Build Status](https://travis-ci.org/tonytins/isow.svg?branch=master)](https://travis-ci.org/tonytins/isow) [![codecov](https://codecov.io/gh/tonytins/isow/branch/master/graph/badge.svg)](https://codecov.io/gh/tonytins/isow)
+![Rust](https://github.com/tonytins/isow/workflows/Rust/badge.svg) [![Build Status](https://travis-ci.org/tonytins/isow.svg?branch=master)](https://travis-ci.org/tonytins/isow) [![Build status](https://ci.appveyor.com/api/projects/status/ffru6ik26j2b87ko?svg=true)](https://ci.appveyor.com/project/tonytins/isow) [![codecov](https://codecov.io/gh/tonytins/isow/branch/master/graph/badge.svg)](https://codecov.io/gh/tonytins/isow)
 
 A CLI program that prints the local or utc week in the ISO 8601 format, e.g. 2006-W52-7. By default, ISOW uses your local time zone. Adding ``-u`` will switch to UTC.
 
