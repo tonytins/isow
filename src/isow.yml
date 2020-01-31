@@ -8,23 +8,14 @@ args:
       help: Prints the year
       long: year
       short: y
-      conflicts_with:
-        - week
-        - day
   - day:
       help: Prints the day
       long: day
       short: d
-      conflicts_with:
-        - year
-        - week
   - week:
       help: Prints the week
       long: week
       short: w
-      conflicts_with:
-        - year
-        - day
 
 subcommands:
   - update:
