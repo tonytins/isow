@@ -18,25 +18,26 @@ Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c)
 
 See also the list of [contributors](https://github.com/tonytins/isow/contributors) who participated in this project.
 
-## Examples
-
-- ``isow``: ``2006-W52-7``
-- ``isow -d``: ``7``
-- ``isow -w``: ``W52``
-- ``isow -y``: ``2006``
-
-Year-day and week-day combinations are also possible.
-
-- ``isow -yd``: ``2006-7``
-- ``isow -wd``: ``W52-7``
-
-## Installing
+## Installation and Usage
 
 You can download binaries for any of the above support platforms by going to the [releases](https://github.com/tonytins/isow/releases) page or by installing via. Cargo by typing in ``cargo install isow``.
 
-### Updating
+```
+USAGE:
+    isow [FLAGS] [SUBCOMMAND]
 
-You can update ISOW at anytime by typing ``isow update``. This will give you information on the latest release, if any, and any compatibility warnings with an option to accept or deny the download. Adding the ``-l`` or ``--list`` flag to the update subcommand will give you list of all available updates.
+FLAGS:
+    -d, --day        Prints the day
+    -h, --help       Prints help information
+    -u, --utc        Swaps your local time zone for UTC.
+    -V, --version    Prints version information
+    -w, --week       Prints the week
+    -y, --year       Prints the year
+
+SUBCOMMANDS:
+    help      Prints this message or the help of the given subcommand(s)
+    update    Updates the program to the latest version.
+```
 
 **The updater is not available in Crates.io releases.**
 
