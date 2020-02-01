@@ -39,7 +39,11 @@ SUBCOMMANDS:
     update    Updates the program to the latest version.
 ```
 
-**The updater is not available in Crates.io releases.**
+## Updates
+
+You can update ISOW at anytime by typing ``isow update``. This will give you information on the latest release, if any, and any compatibility warnings with an optionto accept or deny the download.
+
+**Self-updates are not supported in Crates.io releases.**
 
 ## License
 

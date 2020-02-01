@@ -1,6 +1,6 @@
 [package]
 name = "isow"
-version = "0.2.7"
+version = "0.2.8"
 authors = ["Anthony Foxclaw"]
 edition = "2018"
 repository = "https://github.com/tonytins/isow"
@@ -19,8 +19,9 @@ codecov = { repository = "tonytins/isow", branch = "master" }
 maintenance = { status = "actively-developed" }
 
 [dependencies]
+anyhow = "1.0"
 chrono = "0.4"
-self_update = { version = "0.8", optional = true }
+self_update = { version = "0.11", optional = true }
 clap = { version = "2.33", features = [ "yaml", "wrap_help" ] }
 
 [features]

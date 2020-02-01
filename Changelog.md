@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.2.6-7
+
+- Maintenance releases. Internal changes.
+
 ## 0.2.5
 
 - Removed arbitrary flag conflicts and allowed support for all possible combos, including the default. The reason they were there in the first place was due to my misunderstanding of how Rust interrupts match patterns.

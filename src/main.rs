@@ -14,7 +14,8 @@ use patcher::*;
 use std::error::Error;
 
 fn exit_on_error(err: Box<dyn Error>) {
-    eprintln!("[ERROR] {}", err);
+    let err_context = err.to_string();
+    eprintln!("[ERROR] {}", err_context.as_str());
     ::std::process::exit(1);
 }
 
@@ -40,7 +41,7 @@ fn main() {
                         }
                     }
                     false => {
-                        if let Err(err) = patcher.update("isow") {
+                        if let Err(err) = patcher.update() {
                             exit_on_error(err);
                         }
                     }
