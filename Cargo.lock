@@ -531,12 +531,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "isodate"
+version = "0.1.0"
+source = "git+https://github.com/tonytins/isodate#9a0e70757420f08b19e43804c7289afba3939cd2"
+dependencies = [
+ "chrono",
+]
+
+[[package]]
 name = "isow"
-version = "0.2.8"
+version = "0.2.10"
 dependencies = [
  "anyhow",
  "chrono",
  "clap",
+ "isodate",
  "self_update",
 ]
 

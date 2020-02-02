@@ -4,9 +4,9 @@
  */
 #![allow(dead_code)]
 #![cfg(feature = "updater")]
+use anyhow::Result;
 use clap::crate_version;
 use self_update::backends::github::{ReleaseList, Update};
-use anyhow::Result;
 use std::error::Error;
 
 pub const REPO_NAME: &str = "isow";
@@ -36,7 +36,6 @@ impl Patcher {
             bin_name: bin.into(),
         }
     }
-
 
     pub fn release_list(self) -> Result<(), Box<dyn Error>> {
         let releases = ReleaseList::configure()

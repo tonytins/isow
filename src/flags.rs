@@ -8,4 +8,5 @@ pub const UTC_FLAG: &str = "utc";
 pub const DAY_FLAG: &str = "day";
 pub const WEEK_FLAG: &str = "week";
 pub const YEAR_FLAG: &str = "year";
+pub const TIME_FLAG: &str = "time";
 pub const UPDATE_FLAG: &str = "update";

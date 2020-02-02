@@ -16,10 +16,14 @@ args:
       help: Prints the week
       long: week
       short: w
+  - time:
+      help: Prints the time
+      long: time
+      short: t
 
 subcommands:
   - update:
-      about: Updates the program to the latest version.
+      about: Updates the program to the latest version
       args:
         - list:
             long: list

@@ -29,6 +29,7 @@ USAGE:
 FLAGS:
     -d, --day        Prints the day
     -h, --help       Prints help information
+    -t, --time       Prints the time
     -u, --utc        Swaps your local time zone for UTC.
     -V, --version    Prints version information
     -w, --week       Prints the week
@@ -36,7 +37,9 @@ FLAGS:
 
 SUBCOMMANDS:
     help      Prints this message or the help of the given subcommand(s)
-    update    Updates the program to the latest version.
+    update    Updates the program to the latest version
+
+Process finished with exit code 0
 ```
 
 ## Updates
