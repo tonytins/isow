@@ -6,10 +6,10 @@
 mod flags;
 mod patcher;
 
-use chrono::{Datelike, Local, Utc};
+use chrono::{Datelike, Local, NaiveDate, Utc};
 use clap::{crate_authors, crate_description, crate_version, load_yaml, App};
 use flags::*;
-use isodate::IsoDate;
+use isocal::IsoDate;
 #[cfg(feature = "updater")]
 use patcher::*;
 use std::error::Error;

@@ -531,9 +531,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "isodate"
+name = "isocal"
 version = "0.1.0"
-source = "git+https://github.com/tonytins/isodate#9a0e70757420f08b19e43804c7289afba3939cd2"
+source = "git+https://github.com/tonytins/isocal#faa1cf92f95d9e0c12a7e46cdd543d03c11adc3a"
 dependencies = [
  "chrono",
 ]
@@ -545,7 +545,7 @@ dependencies = [
  "anyhow",
  "chrono",
  "clap",
- "isodate",
+ "isocal",
  "self_update",
 ]
 

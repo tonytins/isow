@@ -11,6 +11,15 @@ Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c)
 ### Prerequisites
 
 - Rust 1.41+
+- Recommended IDEs
+  - Visual Studio Code
+  - Jetbrains IntelliJ
+
+### Supported Platforms
+
+- Ubuntu 18.04+
+- Windows 10 v1809+
+- macOS 10.15+
 
 ## Authors
 
