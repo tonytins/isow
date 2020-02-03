@@ -13,6 +13,7 @@ use isocal::IsoDate;
 #[cfg(feature = "updater")]
 use patcher::*;
 use std::error::Error;
+use last_git_commit::{LastGitCommit, Id};
 
 fn exit_on_error(err: Box<dyn Error>) {
     let err_context = err.to_string();
@@ -22,10 +23,12 @@ fn exit_on_error(err: Box<dyn Error>) {
 
 fn main() {
     let yaml = load_yaml!("isow.yml");
+    let lgc = LastGitCommit::new(None, None).unwrap();
+    let ver_id = format!("{}-{}", crate_version!(), lgc.id.long());
     let matches = App::from_yaml(yaml)
         .author(crate_authors!())
         .about(crate_description!())
-        .version(crate_version!())
+        .version(ver_id)
         .get_matches();
 
     match matches.subcommand_name() {
