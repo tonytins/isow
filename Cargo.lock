@@ -533,7 +533,8 @@ dependencies = [
 [[package]]
 name = "isocal"
 version = "0.1.0"
-source = "git+https://github.com/tonytins/isocal#d64e4ef003fb4d2b40a34d8dda7d44fef5926ce9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c4297888701dda5c66c53fea39b01afd3a5b08cb19d57d21fa1b310f07355804"
 dependencies = [
  "chrono",
 ]
