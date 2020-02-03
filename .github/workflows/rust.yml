@@ -22,7 +22,7 @@ jobs:
       - name: Linters
         if: succeeded() || failed()
         run: cargo fmt -- --check
-      - run: Upload artifact
+      - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v1
         with:
@@ -41,7 +41,7 @@ jobs:
       - name: Linters
         if: succeeded() || failed()
         run: cargo fmt -- --check
-      - run: Upload artifact
+      - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v1
         with:
@@ -60,7 +60,7 @@ jobs:
       - name: Linters
         if: succeeded() || failed()
         run: cargo fmt -- --check
-      - run: Upload artifact
+      - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v1
         with:
