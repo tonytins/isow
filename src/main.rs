@@ -16,8 +16,7 @@ use std::error::Error;
 use last_git_commit::{LastGitCommit, Id};
 
 fn exit_on_error(err: Box<dyn Error>) {
-    let err_context = err.to_string();
-    eprintln!("[ERROR] {}", err_context.as_str());
+    eprintln!("[ERROR] {}", err);
     ::std::process::exit(1);
 }
 
