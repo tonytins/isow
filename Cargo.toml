@@ -6,7 +6,7 @@ edition = "2018"
 repository = "https://github.com/tonytins/isow"
 license = "MPL-2.0"
 description = """
-Prints the local or utc week in the ISO 8601 format, e.g. 2006-W52-7.
+Prints the local or utc week in the ISO 8601 format, e.g. 2006-W52-7T10:26:20.485371700.
 """
 readme = "README.md"
 keywords = ["finance", "week", "iso-8601", "iso-week"]
@@ -21,7 +21,7 @@ maintenance = { status = "actively-developed" }
 [dependencies]
 anyhow = "1.0"
 chrono = "0.4"
-last-git-commit = "0.1"
+rbtag = "0.3"
 isocal = { git = "https://github.com/tonytins/isocal" }
 self_update = { version = "0.11", optional = true }
 clap = { version = "2.33", features = [ "yaml", "wrap_help" ] }

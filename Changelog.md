@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.2.11
+
+- Version now includes the git commit hash. This should help improve security, as described on the [Reproducible Builds](https://reproducible-builds.org/) website, and provide a good means of debugging production builds. Versions prior to 0.2.11 should be considered untrusted going forward.
+
 ### 0.2.10
 
 - Time has been added shown default along with the rest of the date.  It can be optionally added with the ``-t`` or ``--time`` flag in combo with any existing ones.

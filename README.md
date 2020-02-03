@@ -2,7 +2,7 @@
 
 ![Rust](https://github.com/tonytins/isow/workflows/Rust/badge.svg) [![Build Status](https://travis-ci.org/tonytins/isow.svg?branch=master)](https://travis-ci.org/tonytins/isow) [![Build status](https://ci.appveyor.com/api/projects/status/ffru6ik26j2b87ko?svg=true)](https://ci.appveyor.com/project/tonytins/isow) [![codecov](https://codecov.io/gh/tonytins/isow/branch/master/graph/badge.svg)](https://codecov.io/gh/tonytins/isow)
 
-A CLI program that prints the local or utc week in the ISO 8601 format, e.g. 2006-W52-7. By default, ISOW uses your local time zone. Adding ``-u`` will switch to UTC.
+A CLI program that prints the local or utc week and time in the ISO 8601 format, e.g. 2006-W52-7T10:26:20.485371700.
 
 Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c) inspired me to write this. This is not designed to print the full ISO 8601 date and time, only the week date. For more technical information on ISO week, [visit Wikipedia](https://en.wikipedia.org/wiki/ISO_week_date).
 
@@ -50,6 +50,8 @@ SUBCOMMANDS:
 
 Process finished with exit code 0
 ```
+
+By default, ISOW uses your local time zone. Adding ``-u`` will switch to UTC.
 
 ## Updates
 
