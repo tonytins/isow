@@ -9,7 +9,7 @@ description = """
 Prints the local or utc week in the ISO 8601 format, e.g. 2006-W52-7.
 """
 readme = "README.md"
-keywords = ["finance", "week", "iso", "iso-week"]
+keywords = ["finance", "week", "iso-8601", "iso-week"]
 categories = ["command-line-utilities", "date-and-time"]
 
 [badges]

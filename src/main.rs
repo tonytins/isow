@@ -6,7 +6,7 @@
 mod flags;
 mod patcher;
 
-use chrono::{Datelike, Local, NaiveDate, Utc};
+use chrono::{Datelike, Local, Utc};
 use clap::{crate_authors, crate_description, crate_version, load_yaml, App};
 use flags::*;
 use isocal::IsoDate;

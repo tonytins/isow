@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.2.10
+
+- Time has been added shown default along with the rest of the date.  It can be optionally added with the ``-t`` or ``--time`` flag in combo with any existing ones.
+
 ### 0.2.6-7
 
 - Maintenance releases. Internal changes.

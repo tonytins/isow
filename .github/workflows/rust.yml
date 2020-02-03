@@ -22,7 +22,6 @@ jobs:
       - name: Linters
         run: cargo fmt -- --check
       - name: Upload artifact
-        if: github.ref == 'refs/heads/release/**'
         uses: actions/upload-artifact@v1
         with:
           name: x86_64-unknown-linux-gnu
@@ -40,7 +39,6 @@ jobs:
       - name: Linters
         run: cargo fmt -- --check
       - name: Upload artifact
-        if: github.ref == 'refs/heads/release/**'
         uses: actions/upload-artifact@v1
         with:
           name: x86_64-apple-darwin
@@ -58,7 +56,6 @@ jobs:
       - name: Linters
         run: cargo fmt -- --check
       - name: Upload artifact
-        if: github.ref == 'refs/heads/release/**'
         uses: actions/upload-artifact@v1
         with:
           name: x86_64-pc-windows-msvc
