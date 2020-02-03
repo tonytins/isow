@@ -28,7 +28,7 @@ fn main() {
     let matches = App::from_yaml(yaml)
         .author(crate_authors!())
         .about(crate_description!())
-        .version(ver_id)
+        .version(ver_id.as_str())
         .get_matches();
 
     match matches.subcommand_name() {
