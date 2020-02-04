@@ -70,13 +70,19 @@ fn iso_dt(is_utc: bool, is_day: bool, is_week: bool, is_year: bool, is_time: boo
 /// Remove "-clean" from the commit id
 fn normalize_commit_id(id: &str) -> String {
     let clean_stat = "-clean";
+    let cargo_stat = "--dirty";
+
+    match id.contains(cargo_stat) {
+        true => id.replace(cargo_stat, ""),
+        false => id.to_string(),
+    };
 
     match id.contains(clean_stat) {
-        true => {
-            id.replace(clean_stat, "")
-        },
+        true => id.replace(clean_stat, ""),
         false => id.to_string(),
-    }
+    };
+
+    id.to_string()
 }
 
 fn main() {
