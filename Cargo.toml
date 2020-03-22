@@ -1,6 +1,6 @@
 [package]
 name = "isow"
-version = "0.2.12"
+version = "0.2.13"
 authors = ["Anthony Foxclaw"]
 edition = "2018"
 repository = "https://github.com/tonytins/isow"
