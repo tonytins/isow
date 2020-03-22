@@ -17,9 +17,9 @@ Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c)
 
 ### Supported Platforms
 
-- Ubuntu 18.04+
-- Windows 10 v1809+
-- macOS 10.15+
+- Ubuntu 18.04 or later
+- Windows 10 v1809 or later
+- macOS 10.13 High Sierra or later
 
 ## Authors
 
@@ -53,11 +53,15 @@ Process finished with exit code 0
 
 By default, ISOW uses your local time zone. Adding ``-u`` will switch to UTC.
 
-## Updates
+### Updates
 
-You can update ISOW at anytime by typing ``isow update``. This will give you information on the latest release, if any, and any compatibility warnings with an optionto accept or deny the download.
+You can update ISOW at anytime by typing ``isow update``. This will give you information on the latest release, if any, and any compatibility warnings with an option to accept or deny the download.
 
-**Self-updates are not supported in Crates.io releases.**
+### Crates.io Differneces
+
+- Crates.io installations will return ``--dirty`` suffix at the end of their version. This is harmless bug and does not impact the stability ISOW.
+
+- Self-updater is unsupported in the Crates.io releases. As of 0.3.14, this will return a "feature is unsupported" message.
 
 ## License
 

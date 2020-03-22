@@ -1,6 +1,6 @@
 [package]
 name = "isow"
-version = "0.2.11"
+version = "0.2.14"
 authors = ["Anthony Foxclaw"]
 edition = "2018"
 repository = "https://github.com/tonytins/isow"
@@ -22,7 +22,7 @@ maintenance = { status = "actively-developed" }
 anyhow = "1.0"
 chrono = "0.4"
 rbtag = "0.3"
-isocal = { git = "https://github.com/tonytins/isocal" }
+isocal = "0.1"
 self_update = { version = "0.11", optional = true }
 clap = { version = "2.33", features = [ "yaml", "wrap_help" ] }
 

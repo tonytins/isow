@@ -15,6 +15,8 @@ use patcher::*;
 use rbtag::{BuildDateTime, BuildInfo};
 use std::error::Error;
 
+pub const UNSUPPORTED_FEATURE: &str = "This feature is unsupported.";
+
 #[derive(BuildDateTime, BuildInfo)]
 struct BuildTag;
 
@@ -39,7 +41,7 @@ fn iso_dt(is_utc: bool, is_day: bool, is_week: bool, is_year: bool, is_time: boo
     // If the time is in UTC, add a Z directly after the time without a space.
     // Z is the zone designator for the zero UTC offset.
     let time = match is_utc {
-        true => format!("T{}Z", dt_local.time()),
+        true => format!("T{}Z", dt_utc.time()),
         false => format!("T{}", dt_local.time()),
     };
     let year = isow_tz.year();
@@ -112,6 +114,10 @@ fn main() {
                     }
                 }
             }
+        }
+        #[cfg(not(feature = "updater"))]
+        Some(UPDATE_FLAG) => {
+            println!("{}", UNSUPPORTED_FEATURE);
         }
         _ => {
             let is_utc = matches.is_present(UTC_FLAG);
