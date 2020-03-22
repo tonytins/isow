@@ -1,8 +1,9 @@
 # Change Log
 
-### 0.2.13
+### 0.2.13-14
 
 - Fixed a nasty oversight where the ``--utc`` flag returned the local time.
+- If the updater flag is not enabled, ISOW will return "feature not supported".
 
 ### 0.2.11-12
 

@@ -15,6 +15,8 @@ use patcher::*;
 use rbtag::{BuildDateTime, BuildInfo};
 use std::error::Error;
 
+pub const UNSUPPORTED_FEATURE: &str = "This feature is unsupported.";
+
 #[derive(BuildDateTime, BuildInfo)]
 struct BuildTag;
 
@@ -112,6 +114,10 @@ fn main() {
                     }
                 }
             }
+        }
+        #[cfg(not(feature = "updater"))]
+        Some(UPDATE_FLAG) => {
+            println!("{}", UNSUPPORTED_FEATURE);
         }
         _ => {
             let is_utc = matches.is_present(UTC_FLAG);
