@@ -39,7 +39,7 @@ fn iso_dt(is_utc: bool, is_day: bool, is_week: bool, is_year: bool, is_time: boo
     // If the time is in UTC, add a Z directly after the time without a space.
     // Z is the zone designator for the zero UTC offset.
     let time = match is_utc {
-        true => format!("T{}Z", dt_local.time()),
+        true => format!("T{}Z", dt_utc.time()),
         false => format!("T{}", dt_local.time()),
     };
     let year = isow_tz.year();
