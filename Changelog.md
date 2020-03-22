@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.2.12
+
+- Fixed a nasty oversight where the ``--utc`` flag returned the local time.
+
 ### 0.2.11
 
 - Version now includes the git commit hash. This should help improve security, as described on the [Reproducible Builds](https://reproducible-builds.org/) website, and provide a good means of debugging production builds. Versions prior to 0.2.11 should be considered untrusted going forward.
