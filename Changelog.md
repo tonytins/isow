@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.2.15
+
+- If Git isn't present, show only the version without the hash and dirty/clean suffixes. This is meant for Crates.io builds.
+
 ### 0.2.13-14
 
 - Fixed a nasty oversight where the ``--utc`` flag returned the local time.

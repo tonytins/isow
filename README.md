@@ -1,6 +1,6 @@
 # ISOW (ISO Week)
 
-![Rust](https://github.com/tonytins/isow/workflows/Rust/badge.svg) [![Build Status](https://travis-ci.org/tonytins/isow.svg?branch=master)](https://travis-ci.org/tonytins/isow) [![Build status](https://ci.appveyor.com/api/projects/status/ffru6ik26j2b87ko?svg=true)](https://ci.appveyor.com/project/tonytins/isow) [![codecov](https://codecov.io/gh/tonytins/isow/branch/master/graph/badge.svg)](https://codecov.io/gh/tonytins/isow)
+![Rust](https://github.com/tonytins/isow/workflows/Rust/badge.svg) [![Build Status](https://travis-ci.org/tonytins/isow.svg?branch=master)](https://travis-ci.org/tonytins/isow) [![codecov](https://codecov.io/gh/tonytins/isow/branch/master/graph/badge.svg)](https://codecov.io/gh/tonytins/isow)
 
 A CLI program that prints the local or utc week and time in the ISO 8601 format, e.g. 2006-W52-7T10:26:20.485371700.
 
@@ -13,13 +13,15 @@ Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c)
 - Rust 1.41+
 - Recommended IDEs
   - Visual Studio Code
-  - Jetbrains IntelliJ
+  - Jetbrains IntelliJ or CLion
 
 ### Supported Platforms
 
-- Ubuntu 18.04 or later
-- Windows 10 v1809 or later
-- macOS 10.13 High Sierra or later
+- Linux 2.6.18 or later
+- Windows 7 or later
+- macOS 10.7 Lion or later
+
+For more information, see Rust's [Platform Support](https://forge.rust-lang.org/release/platform-support.html) page.
 
 ## Authors
 
