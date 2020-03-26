@@ -59,7 +59,7 @@ You can update ISOW at anytime by typing ``isow update``. This will give you inf
 
 ### Crates.io Differneces
 
-- Self-updater is unsupported in the Crates.io releases. As of 0.3.14, this will return a "feature is unsupported" message.
+- Self-updater is unsupported in the Crates.io releases. As of 0.2.14, this will return a "feature is unsupported" message.
 
 ## License
 
