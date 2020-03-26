@@ -1,6 +1,6 @@
 [package]
 name = "isow"
-version = "0.2.15"
+version = "0.3.0"
 authors = ["Anthony Foxclaw"]
 edition = "2018"
 repository = "https://github.com/tonytins/isow"
@@ -14,7 +14,6 @@ categories = ["command-line-utilities", "date-and-time"]
 
 [badges]
 travis-ci = { repository = "tonytins/isow", branch = "master" }
-codecov = { repository = "tonytins/isow", branch = "master" }
 maintenance = { status = "actively-developed" }
 
 [dependencies]
