@@ -15,7 +15,7 @@ use patcher::*;
 use rbtag::{BuildDateTime, BuildInfo};
 use std::error::Error;
 
-pub const UNSUPPORTED_FEATURE: &str = "This feature is unsupported.";
+pub const UNSUPPORTED_FEATURE: &str = "Feature unsupported in this build.";
 
 #[derive(BuildDateTime, BuildInfo)]
 struct BuildTag;
@@ -81,17 +81,29 @@ fn normalize_commit_id(id: &str) -> String {
     }
 }
 
+fn version() -> String {
+
+    let build_commit = BuildTag {}.get_build_commit();
+
+    // If build_commit shows only "-dirty" and not the commit,
+    // then show only the version. This is meant for Crates.io builds
+    if build_commit == "-dirty" {
+        format!("{}", crate_version!())
+    } else {
+        format!(
+            "{}-{}",
+            crate_version!(),
+            normalize_commit_id(build_commit)
+        )
+    }
+}
+
 fn main() {
     let yaml = load_yaml!("isow.yml");
-    let ver_id = format!(
-        "{}-{}",
-        crate_version!(),
-        normalize_commit_id(BuildTag {}.get_build_commit())
-    );
     let matches = App::from_yaml(yaml)
         .author(crate_authors!())
         .about(crate_description!())
-        .version(ver_id.as_str())
+        .version(version().as_str())
         .get_matches();
 
     match matches.subcommand_name() {

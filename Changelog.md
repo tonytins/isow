@@ -1,5 +1,13 @@
 # Change Log
 
+### 0.3.0
+
+0.3 marks a culmination of all of 0.2's updates. Where 0.2 focused on features and improvements in displaying the time, this release cycle will focus on time keeping. Although 0.3 brings no new user features, a lot of dependencies have been upgraded.
+
+### 0.2.15
+
+- If Git isn't present, show only the version without the hash and dirty/clean suffixes. This is meant for Crates.io builds.
+
 ### 0.2.13-14
 
 - Fixed a nasty oversight where the ``--utc`` flag returned the local time.

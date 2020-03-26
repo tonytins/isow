@@ -1,6 +1,6 @@
 [package]
 name = "isow"
-version = "0.2.14"
+version = "0.3.0"
 authors = ["Anthony Foxclaw"]
 edition = "2018"
 repository = "https://github.com/tonytins/isow"
@@ -13,9 +13,7 @@ keywords = ["finance", "week", "iso-8601", "iso-week"]
 categories = ["command-line-utilities", "date-and-time"]
 
 [badges]
-appveyor = { repository = "tonytins/isow", branch = "master" }
 travis-ci = { repository = "tonytins/isow", branch = "master" }
-codecov = { repository = "tonytins/isow", branch = "master" }
 maintenance = { status = "actively-developed" }
 
 [dependencies]
