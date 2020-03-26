@@ -49,8 +49,6 @@ FLAGS:
 SUBCOMMANDS:
     help      Prints this message or the help of the given subcommand(s)
     update    Updates the program to the latest version
-
-Process finished with exit code 0
 ```
 
 By default, ISOW uses your local time zone. Adding ``-u`` will switch to UTC.
@@ -60,8 +58,6 @@ By default, ISOW uses your local time zone. Adding ``-u`` will switch to UTC.
 You can update ISOW at anytime by typing ``isow update``. This will give you information on the latest release, if any, and any compatibility warnings with an option to accept or deny the download.
 
 ### Crates.io Differneces
-
-- Crates.io installations will return ``--dirty`` suffix at the end of their version. This is harmless bug and does not impact the stability ISOW.
 
 - Self-updater is unsupported in the Crates.io releases. As of 0.3.14, this will return a "feature is unsupported" message.
 
