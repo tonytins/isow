@@ -539,7 +539,7 @@ dependencies = [
 
 [[package]]
 name = "isow"
-version = "0.3.0"
+version = "0.2.14-beta"
 dependencies = [
  "anyhow",
  "chrono",
