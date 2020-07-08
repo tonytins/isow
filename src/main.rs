@@ -3,15 +3,13 @@
  * See the LICENSE file in the project root for more information.
  */
 #![allow(dead_code)]
-mod flags;
-mod patcher;
+#![allow(unused_imports)]
 
 use chrono::{Datelike, Local, Utc};
-use clap::{crate_authors, crate_description, crate_version, load_yaml, App};
-use flags::*;
+use clap::{crate_authors, crate_description, crate_version, App, Clap};
 use isocal::IsoDate;
-#[cfg(feature = "updater")]
-use patcher::*;
+#[cfg(feature = "updater")] use isow::patcher::Patcher;
+use isow::options::{Options, Update};
 use rbtag::{BuildDateTime, BuildInfo};
 use std::error::Error;
 
@@ -99,48 +97,38 @@ fn version() -> String {
 }
 
 fn main() {
-    let yaml = load_yaml!("isow.yml");
-    let matches = App::from_yaml(yaml)
-        .author(crate_authors!())
-        .about(crate_description!())
-        .version(version().as_str())
-        .get_matches();
+    // let yaml = load_yaml!("isow.yml");
+    let opts: Options = Options::parse();
 
-    match matches.subcommand_name() {
-        #[cfg(feature = "updater")]
-        Some(UPDATE_FLAG) => {
-            if let Some(upd) = matches.subcommand_matches(UPDATE_FLAG) {
-                let patcher = Patcher::default();
-                let is_status = upd.is_present(LIST_FLAG);
 
-                match is_status {
-                    true => {
-                        if let Err(err) = patcher.release_list() {
-                            exit_on_error(err);
-                        }
+    /*#[cfg(feature = "updater")]
+    match opts.update {
+        Update::Patch(upd) => {
+            let patcher = Patcher::default();
+            let is_status = upd.list;
+
+            match is_status {
+                true => {
+                    if let Err(err) = patcher.release_list() {
+                        exit_on_error(err);
                     }
-                    false => {
-                        if let Err(err) = patcher.update() {
-                            exit_on_error(err);
-                        }
+                }
+                false => {
+                    if let Err(err) = patcher.update() {
+                        exit_on_error(err);
                     }
                 }
             }
         }
-        #[cfg(not(feature = "updater"))]
-        Some(UPDATE_FLAG) => {
-            println!("{}", UNSUPPORTED_FEATURE);
-        }
-        _ => {
-            let is_utc = matches.is_present(UTC_FLAG);
-            let (is_day, is_week, is_year, is_time) = (
-                matches.is_present(DAY_FLAG),
-                matches.is_present(WEEK_FLAG),
-                matches.is_present(YEAR_FLAG),
-                matches.is_present(TIME_FLAG),
-            );
+    }*/
 
-            println!("{}", iso_dt(is_utc, is_day, is_week, is_year, is_time));
-        }
-    }
+    let is_utc = opts.utc;
+    let (is_day, is_week, is_year, is_time) = (
+        opts.day,
+        opts.week,
+        opts.year,
+        opts.time,
+    );
+
+    println!("{}", iso_dt(is_utc, is_day, is_week, is_year, is_time));
 }
