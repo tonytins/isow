@@ -1,7 +1,8 @@
 #![allow(unused_imports)]
-use clap::{crate_authors, crate_description, crate_version, Clap};
+use clap::{Clap};
 
-#[derive(Clap)]
+#[derive(Clap, Debug)]
+#[clap(author, about, version)]
 pub struct Options {
     #[clap(short, long)]
     pub utc: bool,
@@ -13,17 +14,19 @@ pub struct Options {
     pub week: bool,
     #[clap(short, long)]
     pub time: bool,
-    /*#[clap(subcommand)]
-    pub update: Update,*/
+    #[clap(short, long)]
+    pub version: bool,
+    #[clap(subcommand)]
+    pub patcher: Patcher,
 }
 
-#[derive(Clap)]
-pub enum Update {
-    Patch(Patcher)
+#[derive(Clap, Debug)]
+pub enum Patcher {
+    Update(Updater)
 }
 
-#[derive(Clap)]
-pub struct Patcher {
+#[derive(Clap, Debug)]
+pub struct Updater {
     #[clap(short, long)]
     pub list: bool,
 }
