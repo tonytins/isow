@@ -14,8 +14,6 @@ pub struct Options {
     pub week: bool,
     #[clap(short, long)]
     pub time: bool,
-    #[clap(short, long)]
-    pub version: bool,
     #[clap(subcommand)]
     pub patcher: Patcher,
 }
