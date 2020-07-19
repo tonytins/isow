@@ -64,3 +64,7 @@ You can update ISOW at anytime by typing ``isow update``. This will give you inf
 ## License
 
 This project is licensed under the MPL 2.0 license - see the [LICENSE](LICENSE) file for details.
+
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CODE-OF-CONDUCT.md). By participating in this project you agree to abide by its terms.
