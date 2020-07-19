@@ -1,6 +1,6 @@
 # ISOW (ISO Week)
 
-![Rust](https://github.com/tonytins/isow/workflows/Rust/badge.svg) [![Build Status](https://travis-ci.org/tonytins/isow.svg?branch=master)](https://travis-ci.org/tonytins/isow)
+![Rust](https://github.com/tonytins/isow/workflows/Rust/badge.svg) [![Build Status](https://travis-ci.org/tonytins/isow.svg?branch=master)](https://travis-ci.org/tonytins/isow) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 A CLI program that prints the local or utc week and time in the ISO 8601 format, e.g. 2006-W52-7T10:26:20.485371700.
 
