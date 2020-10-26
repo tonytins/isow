@@ -23,12 +23,6 @@ Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c)
 
 For more information, see Rust's [Platform Support](https://forge.rust-lang.org/release/platform-support.html) page.
 
-## Authors
-
-- **Anthony Foxclaw** - _Initial work_ - [tonytins](https://github.com/tonytins)
-
-See also the list of [contributors](https://github.com/tonytins/isow/contributors) who participated in this project.
-
 ## Installation and Usage
 
 You can download binaries for any of the above support platforms by going to the [releases](https://github.com/tonytins/isow/releases) page or by installing via. Cargo by typing in ``cargo install isow``.
