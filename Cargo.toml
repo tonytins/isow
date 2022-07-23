@@ -1,20 +1,13 @@
 [package]
 name = "isow"
-version = "0.3.0"
-authors = ["Anthony Foxclaw"]
-edition = "2018"
+version = "0.2.106-beta1"
+authors = ["Tony Bark"]
+edition = "2021"
 repository = "https://github.com/tonytins/isow"
 license = "MPL-2.0"
-description = """
-Prints the local or utc week in the ISO 8601 format, e.g. 2006-W52-7T10:26:20.485371700.
-"""
 readme = "README.md"
 keywords = ["finance", "week", "iso-8601", "iso-week"]
 categories = ["command-line-utilities", "date-and-time"]
-
-[badges]
-travis-ci = { repository = "tonytins/isow", branch = "master" }
-maintenance = { status = "actively-developed" }
 
 [dependencies]
 anyhow = "1.0"
@@ -22,7 +15,7 @@ chrono = "0.4"
 rbtag = "0.3"
 isocal = "0.1"
 self_update = { version = "0.11", optional = true }
-clap = { version = "2.33", features = [ "yaml", "wrap_help" ] }
+clap = { version = "3.0.0-beta.1", features = [ "wrap_help" ] }
 
 [features]
 updater = ["self_update"]
