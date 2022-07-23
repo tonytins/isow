@@ -1,19 +1,18 @@
-/*
- * This project is licensed under the MPL 2.0 license.
- * See the LICENSE file in the project root for more information.
- */
+// This project is licensed under the MPL 2.0 license.
+// See the LICENSE file in the project root for more information.
 #![allow(dead_code)]
 #![allow(unused_imports)]
 
 use chrono::{Datelike, Local, Utc};
 use clap::{crate_authors, crate_description, crate_version, App, Clap};
 use isocal::IsoDate;
-#[cfg(feature = "updater")] use isow::patcher::Patcher;
 use isow::options::{Options, Updater};
+#[cfg(feature = "updater")]
+use isow::patcher::Patcher;
 // use rbtag::{BuildDateTime, BuildInfo};
-use std::error::Error;
 use isow::options::Patcher::Update;
 use std::convert::TryInto;
+use std::error::Error;
 
 fn exit_on_error(err: Box<dyn Error>) {
     eprintln!("[ERROR] {}", err);
@@ -94,12 +93,7 @@ fn main() {
     let opts: Options = Options::parse();
 
     let is_utc = opts.utc;
-    let (is_day, is_week, is_year, is_time) = (
-        opts.day,
-        opts.week,
-        opts.year,
-        opts.time,
-    );
+    let (is_day, is_week, is_year, is_time) = (opts.day, opts.week, opts.year, opts.time);
     let iso_date = iso_dt(is_utc, is_day, is_week, is_year, is_time);
 
     #[cfg(feature = "updater")]

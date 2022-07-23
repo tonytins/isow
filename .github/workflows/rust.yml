@@ -1,57 +1,20 @@
 name: Rust
 
-on: 
+on:
   push:
-    branches:    
-      - master
-      - develop
-      - 'release/**'
+    branches: [develop, main, "release/**", "feature/**", "patch/**"]
+  pull_request:
+    branches: [develop, main, "release/**", "feature/**", "patch/**"]
 
 jobs:
-  linux:
-    name: Ubuntu
+  build:
     runs-on: ${{ matrix.platform }}
     strategy:
       matrix:
-        platform: [ubuntu-16.04, ubuntu-latest]
+        platform: [ubuntu-latest, macos-latest, windows-latest]
     steps:
       - uses: actions/checkout@v1
-      - name: Update
-        run: rustup update
       - name: Build
-        run: cargo build -v --release --all-features
-      - name: Upload artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: x86_64-unknown-linux-gnu
-          path: target/release/isow
-
-  macos:
-    name: macOS
-    runs-on: macOS-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Update
-        run: rustup update
-      - name: Build
-        run: cargo build -v --release --all-features
-      - name: Upload artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: x86_64-apple-darwin
-          path: target/release/isow
-
-  windows:
-    name: Windows
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Update
-        run: rustup update
-      - name: Build
-        run: cargo build -v --release --all-features
-      - name: Upload artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: x86_64-pc-windows-msvc
-          path: target/release/isow.exe
+        run: cargo build --verbose
+      - name: Run tests
+        run: cargo test --verbose

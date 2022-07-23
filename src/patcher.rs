@@ -1,7 +1,5 @@
-/*
- * This project is licensed under the MPL 2.0 license.
- * See the LICENSE file in the project root for more information.
- */
+// This project is licensed under the MPL 2.0 license.
+// See the LICENSE file in the project root for more information.
 #![allow(dead_code)]
 #![cfg(feature = "updater")]
 use anyhow::Result;
