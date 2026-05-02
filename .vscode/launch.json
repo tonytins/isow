@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:isow}",
+            "name": "Debug isow",
+            "target": "isow",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug isow"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:isow}",
+            "name": "Release isow",
+            "target": "isow",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release isow"
+        }
+    ]
+}
