@@ -1,16 +1,18 @@
 # Change Log
 
-### 0.3.0
+## 0.3
 
-0.3 marks a culmination of all of 0.2's updates. Where 0.2 focused on features and improvements in displaying the time, this release cycle will focus on time keeping. Although 0.3 brings no new user features, a lot of dependencies have been upgraded.
+Rewrote in Swift. This new version no longer carries all the baggage from the original Rust implantation did. While this certainly has it's uses, it wasn't meant to be anything *that* serious. I just simply made it for fun. This project only evolved the way it did because it required so much extra dependencies that required extra oversight.
+
+## Rust
 
 ### 0.2.15
 
 - If Git isn't present, show only the version without the hash and dirty/clean suffixes. This is meant for Crates.io builds.
 
-### 0.2.13-14
+### 0.2.13
 
-- Fixed a nasty oversight where the ``--utc`` flag returned the local time.
+- Fixed an oversight where the ``--utc`` flag returned the local time.
 - If the updater flag is not enabled, ISOW will return "feature not supported".
 
 ### 0.2.11-12
@@ -37,11 +39,11 @@
 
 - Renamed "status" flag to "list" in the update subcommand
 
-## 0.2.0
+## 0.2
 
 - Relatively stable features
 - Initial release with self-updating support.
 
-## 0.1.0
+## 0.1
 
 This was the internal development version that focused on getting it to a relatively stable release.

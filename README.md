@@ -1,7 +1,6 @@
 # ISOW (ISO Week)
 
-A CLI program that prints the local or utc week and time in the ISO 8601 format, e.g. ``
-2026-W18-04``.
+A CLI program that prints the local or utc week and time in the ISO 8601 format, e.g. ``2026-W18-04``.
 
 Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c) inspired me to write this. This is not designed to print the full ISO 8601 date and time, only the week date. For more technical information on ISO week, [visit Wikipedia](https://en.wikipedia.org/wiki/ISO_week_date).
 
