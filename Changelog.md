@@ -15,7 +15,7 @@ Rewrote in Swift. This new version no longer carries all the baggage from the or
 - Fixed an oversight where the ``--utc`` flag returned the local time.
 - If the updater flag is not enabled, ISOW will return "feature not supported".
 
-### 0.2.11-12
+### 0.2.11
 
 - Version now includes the git commit hash. This should help improve security, as described on the [Reproducible Builds](https://reproducible-builds.org/) website, and provide a good means of debugging production builds. Versions prior to 0.2.11 should be considered untrusted going forward.
 
@@ -23,7 +23,7 @@ Rewrote in Swift. This new version no longer carries all the baggage from the or
 
 - Time has been added shown default along with the rest of the date.  It can be optionally added with the ``-t`` or ``--time`` flag in combo with any existing ones.
 
-### 0.2.6-7
+### 0.2.6
 
 - Maintenance releases. Internal changes.
 

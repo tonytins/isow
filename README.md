@@ -8,7 +8,7 @@ Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c)
 
 ### Development
 
-- Swift 6 or later
+- Swift 6.3+
 
 ### Deployment
 
