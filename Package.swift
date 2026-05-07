@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "IsoWeek",
+    platforms: [.macOS(.v12)],
     products: [
         .executable(name: "isow", targets: ["IsoWeek"]),
     ],
@@ -18,12 +19,12 @@ let package = Package(
             name: "IsoWeek",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-            ]
+            ],
         ),
         .testTarget(
             name: "IsoWeekTests",
-            dependencies: ["IsoWeek"]
+            dependencies: ["IsoWeek"],
         ),
     ],
-    swiftLanguageModes: [.v6]
+    swiftLanguageModes: [.v6],
 )
