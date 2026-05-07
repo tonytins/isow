@@ -1,18 +1,20 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
-//
-// Swift Argument Parser
-// https://swiftpackageindex.com/apple/swift-argument-parser/documentation
-
 import ArgumentParser
 import Foundation
 
 @main
 struct IsoWeek: ParsableCommand {
+    @Flag(name: .shortAndLong)
+    var utc: Bool = false
+
     mutating func run() throws {
         // Initialize date and calendar
         let date = Date()
         var cal = Calendar(identifier: .iso8601)
+
+        if utc {
+            let timeZone = TimeZone(abbreviation: "UTC")
+            cal.timeZone = timeZone!
+        }
 
         // Grab calendar data
         let week = cal.component(.weekOfYear, from: date)

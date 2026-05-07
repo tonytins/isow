@@ -2,8 +2,8 @@
 [
     {
         "label": "swift run",
-        "command": "swift run",
-        "args": [],
+        "command": "swift run isow",
+        "args": ["-u"],
         "use_new_terminal": false,
         "allow_concurrent_runs": false,
         "reveal": "always",

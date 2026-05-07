@@ -20,6 +20,15 @@ Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c)
 | Debian  | 12      | Bookworm    |
 | Fedora  | 39      | N/A         |
 
+## Usage
+
+```
+isow [-u]
+
+OPTIONS:
+  -u, --utc
+```
+
 ## License
 
 I hereby waive this project's copyright and place it the public domain - see [UNLICENSE](LICENSE) for details.
