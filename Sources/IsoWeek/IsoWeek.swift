@@ -9,17 +9,17 @@ struct IsoWeek: ParsableCommand {
     mutating func run() throws {
         // Initialize date and calendar
         let date = Date()
+        let timeZone = TimeZone(abbreviation: "UTC")
         var cal = Calendar(identifier: .iso8601)
-
-        if utc {
-            let timeZone = TimeZone(abbreviation: "UTC")
-            cal.timeZone = timeZone!
-        }
 
         // Grab calendar data
         let week = cal.component(.weekOfYear, from: date)
         let year = cal.component(.year, from: date)
         let day = cal.component(.day, from: date)
+
+        if utc {
+            cal.timeZone = timeZone ?? .autoupdatingCurrent
+        }
 
         // ISO rules
         cal.firstWeekday = 2

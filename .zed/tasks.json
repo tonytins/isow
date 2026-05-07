@@ -3,7 +3,7 @@
     {
         "label": "swift run",
         "command": "swift run isow",
-        "args": ["-u"],
+        "args": [],
         "use_new_terminal": false,
         "allow_concurrent_runs": false,
         "reveal": "always",
@@ -16,7 +16,7 @@
     },
     {
         "label": "swift build",
-        "command": "swift build",
+        "command": "swift build isow",
         "args": [],
         "use_new_terminal": false,
         "allow_concurrent_runs": false,
@@ -30,7 +30,7 @@
     },
     {
         "label": "swift build release",
-        "command": "swift build",
+        "command": "swift build isow",
         "args": ["-c", "release"],
         "use_new_terminal": false,
         "allow_concurrent_runs": false,
