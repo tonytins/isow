@@ -9,7 +9,6 @@ struct IsoWeek: ParsableCommand {
     mutating func run() throws {
         // Initialize date and calendar
         let date = Date()
-        let timeZone = TimeZone(abbreviation: "UTC")
         var cal = Calendar(identifier: .iso8601)
 
         // Grab calendar data
@@ -18,7 +17,16 @@ struct IsoWeek: ParsableCommand {
         let day = cal.component(.day, from: date)
 
         if utc {
-            cal.timeZone = timeZone ?? .autoupdatingCurrent
+            let timeZone = TimeZone(abbreviation: "UTC")
+
+            // On macOS 13 or newer (and other platforms), fallback to GMT.
+            // If the user is on an older version of macOS, fallback to their current time zone.
+            if #available(macOS 13, *) {
+                cal.timeZone = timeZone ?? .gmt
+            } else {
+                cal.timeZone = timeZone ?? .autoupdatingCurrent
+            }
+
         }
 
         // ISO rules
