@@ -22,11 +22,14 @@ Tom Scott's [Why It's Already 2020](https://www.youtube.com/watch?v=D3jxx8Yyw1c)
 
 ## Usage
 
+```shell
+$isow [--utc] [--full]
 ```
-isow [-u]
 
+```
 OPTIONS:
-  -u, --utc
+  -u, --utc               Switch to UTC time zone.
+  -f, --full                Show the complete date.
 ```
 
 ## License
