@@ -13,8 +13,8 @@
       "name" : "Build Release"
     },
     {
-      "command" : "swiftformat  .",
-      "name" : "Swift Format"
+      "command" : "swiftformat  . --swift-version 6.3",
+      "name" : "Format"
     }
   ]
 }
