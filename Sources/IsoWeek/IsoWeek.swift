@@ -4,7 +4,7 @@ import Foundation
 @main
 struct IsoWeek: ParsableCommand {
     @Flag(name: .shortAndLong, help: "Switch to UTC time zone.")
-    var utc: Bool = false
+    var isUtc: Bool = false
 
     @Flag(name: .shortAndLong, help: "Show the complete date.")
     var full: Bool = false
@@ -18,20 +18,21 @@ struct IsoWeek: ParsableCommand {
         let week = cal.component(.weekOfYear, from: date)
         let year = cal.component(.year, from: date)
         let day = cal.component(.day, from: date)
+        let tz = cal.component(.timeZone, from: date)
 
         // ISO rules
         cal.firstWeekday = 2
         cal.minimumDaysInFirstWeek = 4
 
-        if utc {
-            let timeZone = TimeZone(abbreviation: "UTC")
+        if isUtc {
+            let utc = TimeZone(abbreviation: "UTC")
 
             // On macOS 13 or newer and other platforms, fallback to GMT.
             // If the user is on an older version of macOS, fallback to their current time zone.
             if #available(macOS 13, *) {
-                cal.timeZone = timeZone ?? .gmt
+                cal.timeZone = utc ?? .gmt
             } else {
-                cal.timeZone = timeZone ?? .autoupdatingCurrent
+                cal.timeZone = utc ?? .autoupdatingCurrent
             }
         }
 
